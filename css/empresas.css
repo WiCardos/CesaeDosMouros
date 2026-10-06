@@ -15,47 +15,8 @@ body {
 	font-family: "Montserrat", sans-serif;
 }
 
-.cesae-topbar {
-	position: relative;
-	z-index: 10;
-	border-bottom: 1px solid #ededed;
-	background: #fff;
-}
-
-.cesae-nav {
-	display: flex;
-	min-height: 86px;
-	align-items: center;
-	justify-content: space-between;
-	gap: 22px;
-	padding: 0 14px;
-}
-
-.cesae-brand {
-	width: 130px;
-	height: 58px;
-	object-fit: contain;
-}
-
-.cesae-navlinks {
-	display: flex;
-	align-items: center;
-}
-
-.cesae-navlinks a {
-	border-radius: 24px;
-	background: var(--partner-green);
-	padding: 11px 22px;
-	color: #fff;
-	font-size: 0.85rem;
-	font-weight: 600;
-	text-decoration: none;
-}
-
-.cesae-navlinks a:hover,
-.cesae-navlinks a:focus-visible {
-	background: #5f1f8e;
-	color: #fff;
+.site-navbar {
+	font-family: var(--bs-body-font-family);
 }
 
 .partner-hero {
