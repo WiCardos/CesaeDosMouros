@@ -1,0 +1,151 @@
+/* Layout em Grelha (Grid) para colocar os cartões lado a lado */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exatamente 3 colunas iguais */
+  flex-direction: row;
+  gap: 24px;
+  padding: 24px;
+  background-color: #ffffff;
+  width: 100%;
+  /* max-width: 2000px; */
+  margin: 0 auto;       /* Centra a grelha na página */
+  overflow-x: auto;     /* Permite scroll horizontal se houver muitos cartões */
+  box-sizing: border-box;
+}
+
+/* Estilo Base dos Cartões (Estado Normal - sem hover) */
+.card {
+  background-color: #212132;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+  flex: 0 0 350px;
+  /* Sombra leve e transição suave */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25), 
+              0 8px 10px -6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+/* EFEITO DE DESTAQUE (Hover/Ponteiro em cima ou seleção) */
+.card:hover {
+  /* Sombra forte e difusa exatamente como no primeiro cartão */
+  box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.35), 
+              0 15px 15px -7px rgba(0, 0, 0, 0.2);
+  /* Sobe ligeiramente o cartão */
+  transform: translateY(-4px);
+  
+  /* Garante que o cartão selecionado fica por cima dos vizinhos se houver sobreposição */
+  z-index: 10; 
+  border-color: rgba(99, 102, 241, 0.4); /* Opcional: ligeiro brilho na borda com a cor do botão */
+}
+
+/* Estrutura Interna do Cartão */
+.card-image-container {
+  width: 100%;
+  height: 320px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+
+.provider-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.provider-name {
+  font-size: 14px;
+  color: #f8f9fa;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #ffffff;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #c5c6d0;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+}
+
+.card-meta {
+  font-size: 12px;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+/* Badges/Tags no rodapé do cartão */
+.badges-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-purple {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.badge-gray {
+  background-color: #f1f5f9;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.btn-saber-mais {
+ display: inline-block;
+  background-color: #6a58d0;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: normal;
+  transition: background-color 0.2s ease;
+  white-space: nowrap; /* Evita que o texto do botão dobre em duas linhas */
+}
+
+.btn-saber-mais:hover {
+  background-color: #5759ec;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between; /* Empurra as badges para a esquerda e o botão para a extrema direita */
+  align-items: center;            /* Alinha tudo verticalmente ao centro */
+  width: 100%;                     /* Garante que ocupa toda a largura do cartão */
+}
