@@ -1,16 +1,14 @@
 /* Layout em Grelha (Grid) para colocar os cartões lado a lado */
+
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Exatamente 3 colunas iguais */
-  flex-direction: row;
-  gap: 24px;
-  padding: 24px;
-  background-color: #ffffff;
-  width: 100%;
-  /* max-width: 2000px; */
-  margin: 0 auto;       /* Centra a grelha na página */
-  overflow-x: auto;     /* Permite scroll horizontal se houver muitos cartões */
-  box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px;
 }
 
 /* Estilo Base dos Cartões (Estado Normal - sem hover) */
@@ -61,7 +59,7 @@
   padding: 30px;
 }
 
-.card-header {
+.card-header-h {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -108,9 +106,18 @@
   gap: 8px;
 }
 
-.badge-purple {
-  background-color: #f3e8ff;
-  color: #6b21a8;
+.badge-green {
+  background-color: #b6eab1;
+  color: #0c3205;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.badge-red {
+  background-color: #e8a4a4;
+  color: #580f0f;
   font-size: 12px;
   font-weight: 600;
   padding: 4px 10px;
@@ -143,7 +150,7 @@
   background-color: #5759ec;
 }
 
-.card-footer {
+.card-footer-h {
   display: flex;
   justify-content: space-between; /* Empurra as badges para a esquerda e o botão para a extrema direita */
   align-items: center;            /* Alinha tudo verticalmente ao centro */
