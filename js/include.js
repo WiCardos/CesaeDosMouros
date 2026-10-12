@@ -9,7 +9,7 @@ function loadComponent(id, file) {
 
       const pathPrefix = target.dataset.pathPrefix;
       if (pathPrefix) {
-        target.querySelectorAll('a[href^="pages/"]').forEach((link) => {
+        target.querySelectorAll('a[href^="index.html"], a[href^="pages/"]').forEach((link) => {
           link.setAttribute("href", `${pathPrefix}${link.getAttribute("href")}`);
         });
         target.querySelectorAll('img[src^="images/"]').forEach((image) => {
