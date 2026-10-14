@@ -17,51 +17,11 @@
     <link rel="stylesheet" href="../css/empresas.css" />
   </head>
   <body>
-    <nav
-      class="navbar navbar-expand-lg sticky-top bg-dark navbar-dark site-navbar"
-      aria-label="Navegação principal"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="../index.html">
-          <picture>
-            <img
-              src="../images/ChatGPT Image Oct 5, 2026, 04_48_21 PM.png"
-              alt="Cesae Lisboa"
-              style="width: 150px"
-            />
-          </picture>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#menu"
-          aria-controls="menu"
-          aria-expanded="false"
-          aria-label="Abrir menu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cursos.html">Cursos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#empresas-parceiras" aria-current="page"
-                >Parceiros</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacts.html">Contactos</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div
+      id="navbar"
+      data-component="../components/navbar.html"
+      data-path-prefix="../"
+    ></div>
 
     <!-- Container com as organizações parceiras -->
     <main class="container partner-main" id="filiais">
@@ -80,9 +40,9 @@
             href="../images/404.jpg"
             target="_blank"
             rel="noopener noreferrer"
-            style="min-height: 300px;"
+            style="min-height: 300px"
           >
-           <!-- Usei o style para forçar uma altura maior nos cartões que o pré-definido pela class "card partner-card" do .css -->
+            <!-- Usei o style para forçar uma altura maior nos cartões que o pré-definido pela class "card partner-card" do .css -->
             <div class="card-body">
               <div class="partner-card__logo">
                 <img
@@ -94,11 +54,11 @@
               </div>
               <p class="partner-card__type">Morada</p>
               <h3 class="partner-card__name">
-                Rua da Alfacinhas, nº 42 - 2605-001 Belas
+                Rua das Alfacinhas, nº 42 - 2605-001 Belas
               </h3>
 
               <span class="partner-card__action"
-                ><p>Contacto: 21 123 33 33</p>
+                >Contacto: 21 123 33 33<br />
                 Email: belas@cesaedosmouros.pt</span
               >
             </div>
@@ -107,10 +67,10 @@
         <div class="col">
           <a
             class="card partner-card h-100"
-            href="../images/404.jpg""
+            href="../images/404.jpg"
             target="_blank"
             rel="noopener noreferrer"
-            style="min-height: 300px;"
+            style="min-height: 300px"
           >
             <div class="card-body">
               <div class="partner-card__logo">
@@ -118,7 +78,7 @@
                   src="../images/filiais/cesae_cacem.png"
                   alt="cesaecacem"
                   loading="lazy"
-                  style="width: 150px; height: 150px" 
+                  style="width: 150px; height: 150px"
                 />
                 <!-- Usei o style para forçar um tamanho maior que o pré-definido pela class "partner-card__logo" do .css -->
               </div>
@@ -127,7 +87,7 @@
                 Rua dos Saloios, nº14 2735-001 Cacém
               </h3>
               <span class="partner-card__action"
-                ><p>Contacto: 21 231 11 11</p>
+                >Contacto: 21 231 11 11<br />
                 Email: cacem@cesaedosmouros.pt</span
               >
             </div>
@@ -140,7 +100,7 @@
             href="../images/404.jpg"
             target="_blank"
             rel="noopener noreferrer"
-            style="min-height: 300px;"
+            style="min-height: 300px"
           >
             <div class="card-body">
               <div class="partner-card__logo">
@@ -156,8 +116,8 @@
                 Rua das Galinhas, nº22 2000-001 Santarém
               </h3>
 
-              <span class="partner-card__action"
-                ><p>Contacto: 21 312 22 22</p>
+              <span class="partner-card__action">
+                Contacto: 21 312 22 22<br />
                 Email: santarem@cesaedosmouros.pt</span
               >
             </div>
@@ -182,7 +142,7 @@
             />
           </div>
           <div class="col-12 col-md-8">
-            <label for="telemovel" class="form-label fw-bold">Telemóvel</label>
+            <label for="tlm" class="form-label fw-bold">Telemóvel</label>
             <input
               type="text"
               class="form-control"
@@ -211,16 +171,18 @@
             ></textarea>
           </div>
           <div class="col-12 mt-4">
-            <button 
+            <button
               type="submit"
               class="btn btn-secondary fw-bold px-4"
-              onclick="alert('Mensagem enviada')"
+              onclick="
+                alert(
+                  'Mensagem enviada!! Porém, como ainda não temos base de dados (e porque somos mouros) não vamos fazer nada com a sua mensagem.',
+                )
+              "
             >
               Enviar
-          </button>
+            </button>
             <!-- Button com um alert para abrir um pop-up de mensagem enviada-->
-            
-        </div>
           </div>
         </form>
       </div>
