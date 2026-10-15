@@ -31,7 +31,7 @@ Para explorar o projeto no seu computador, siga os passos abaixo:
 
 1. **Clonar o repositório:**
    ```bash
-   git clone https://github.com/WiCardos/CesaeDosMouros/
+   git clone https://github.com/WiCardos/
    ```
 
 2. **Navegar até à pasta do projeto:**
