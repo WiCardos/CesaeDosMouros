@@ -1,4 +1,4 @@
-# CesaeDosMouros 🐾
+# CESAE dos Mouros 🐾
 
 Um projeto académico dedicado ao universo felino, desenvolvido como uma plataforma conceitual para a oferta de cursos digitais inspirados em gatos.
 
