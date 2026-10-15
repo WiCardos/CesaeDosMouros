@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt">
+<html lang="pt-PT">
 
 <head>
   <meta charset="UTF-8" />
@@ -12,16 +12,39 @@
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
   <!-- CSS personalizado -->
-  <link rel="stylesheet" href="../CSS/cursosTeste2.css" />
+  <link rel="stylesheet" href="../CSS/cursos.css" />
+  <link rel="stylesheet" href="../css/empresas.css" />
 </head>
 
 <body>
   <!-- Navbar -->
   <div id="navbar" data-component="../components/navbar.html" data-path-prefix="../"></div>
 
+  <header class="site-hero">
+    <div class="container site-hero__inner">
+      <div>
+        <p class="site-eyebrow">CESAE · Aprendizagem contínua</p>
+        <h1>Cursos para transformar ideias em competências</h1>
+        <p class="site-hero__intro">
+          Explore a oferta formativa, compare modalidades e encontre a próxima
+          oportunidade para desenvolver o seu percurso.
+        </p>
+      </div>
+      <div class="site-hero__stat" aria-label="Nove cursos em destaque">
+        <span class="site-hero__stat-number">9</span>
+        <span class="site-hero__stat-label">cursos em destaque</span>
+      </div>
+    </div>
+  </header>
+
   <!-- Grelha responsiva dos cartões -->
-  <div class="container py-4">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+  <main class="container site-main">
+    <div class="site-section-heading">
+      <p class="site-eyebrow">Aprenda ao seu ritmo</p>
+      <h2>Formações disponíveis</h2>
+      <p>Consulte a modalidade, duração e condições de cada formação.</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 course-grid">
       <!-- Cartão 1 -->
       <div class="col">
         <div class="card h-100">
@@ -34,7 +57,7 @@
               <span class="provider-name">Lisboa, Laboral</span>
             </div>
 
-            <h3 class="card-title">Google AI</h3>
+            <h3 class="card-title">Cat QA</h3>
 
             <p class="card-description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
@@ -67,10 +90,10 @@
 
           <div class="card-content">
             <div class="card-header-h">
-              <span class="provider-name">Lisboa, Laboral</span>
+              <span class="provider-name">Porto, Pós-Laboral</span>
             </div>
 
-            <h3 class="card-title">Google AI</h3>
+            <h3 class="card-title">Cat Sylist</h3>
 
             <p class="card-description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
@@ -79,8 +102,8 @@
             </p>
 
             <div class="card-meta">
-              <span>26/10/2026</span> • <span>B-Learning</span> •
-              <span>1200h</span>
+              <span>22/10/2026</span> • <span>Online</span> •
+              <span>1150</span>
             </div>
 
             <div class="card-footer-h">
@@ -103,10 +126,10 @@
 
           <div class="card-content">
             <div class="card-header-h">
-              <span class="provider-name">Lisboa, Laboral</span>
+              <span class="provider-name">Viseu, Laboral</span>
             </div>
 
-            <h3 class="card-title">Google AI</h3>
+            <h3 class="card-title">Cat Business Management</h3>
 
             <p class="card-description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
@@ -115,8 +138,8 @@
             </p>
 
             <div class="card-meta">
-              <span>26/10/2026</span> • <span>B-Learning</span> •
-              <span>1200h</span>
+              <span>15/05/2026</span> • <span>Misto</span> •
+              <span>500h</span>
             </div>
 
             <div class="card-footer-h">
@@ -139,10 +162,10 @@
 
           <div class="card-content">
             <div class="card-header-h">
-              <span class="provider-name">Lisboa, Laboral</span>
+              <span class="provider-name">Vila do Conde, Laboral</span>
             </div>
 
-            <h3 class="card-title">Google Data Analytics</h3>
+            <h3 class="card-title">Cat Cybersecurity</h3>
 
             <p class="card-description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
@@ -151,8 +174,8 @@
             </p>
 
             <div class="card-meta">
-              <span>26/10/2026</span> • <span>B-Learning</span> •
-              <span>1200h</span>
+              <span>12/08/2026</span> • <span>Presencial</span> •
+              <span>1500h</span>
             </div>
 
             <div class="card-footer-h">
@@ -175,7 +198,7 @@
 
           <div class="card-content">
             <div class="card-header-h">
-              <span class="provider-name">Lisboa, Laboral</span>
+              <span class="provider-name">Porto, Pós-Laboral</span>
             </div>
 
             <h3 class="card-title">Google Data Analytics</h3>
@@ -348,7 +371,7 @@
       </div>
     </div>
     <!-- Fecha a row -->
-  </div>
+  </main>
   <!-- Fecha o container -->
 
   <!-- JavaScript do Bootstrap -->
